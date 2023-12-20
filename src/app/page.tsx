@@ -1,113 +1,253 @@
-import Image from 'next/image'
+import instagramIcon from "@/assets/icons/Instagram_icon.png";
+import naverBlogIcon from "@/assets/icons/naver-blog.png";
+import { Button } from "@/components/button";
+import { Card } from "@/components/card";
+import { Header } from "@/components/header";
+import { Icon } from "@/components/icon";
+import { Title } from "@/components/title";
+import { cn } from "@/lib/utils";
+import {
+  ArrowRightIcon,
+  BellIcon,
+  CreditCardIcon,
+  PhoneIcon,
+  SparkleIcon,
+  ZapIcon,
+} from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <>
+      <Header />
+      <div className="min-h-screen pb-32 bg-background">
+        <BentoSection />
+      </div>
+    </>
+  );
+}
+
+const BentoSection = () => {
+  return (
+    <main className="container pt-16">
+      <Title>토스페이먼츠 전체 서비스 모아보기</Title>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+        {/* <Card className="md:col-span-3 pb-0">
+          <div className="flex gap-2">
+            <div className="flex flex-col">
+              <Card.Title>
+                토스페이먼츠에서 최적화된 결제 경험을 만들어 보세요
+              </Card.Title>
+              <Card.Subtitle className="whitespace-pre-wrap">
+                {
+                  "토스페이먼츠 기본 결제모드로 결제수단 관리와 프로모션,\n혜택 노출 여부 등 모든 관리를 개발자 없이 어드민에서 쉽게 할 수 있어요."
+                }
+              </Card.Subtitle>
+            </div>
+            <div className="flex flex-1 justify-end">
+              <ArrowRightIcon className="bg-gray-200 rounded-full p-[6px] w-8 h-8" />
+            </div>
+          </div>
+          <div className="flex justify-center gap-6 flex-1">
+            <div className="rounded-t-2xl bg-white mt-8 flex-1 font-semibold p-4 cursor-pointer border-transparent border-t border-r border-l hover:border-gray-300 transition">
+              <div className="flex gap-2">
+                <Icon.Flag />
+                <h4>결제 관리</h4>
+              </div>
+            </div>
+            <div className="rounded-t-2xl bg-white mt-8 flex-1 font-semibold p-4 cursor-pointer border-transparent border-t border-r border-l hover:border-gray-300 transition">
+              <div className="flex gap-2">
+                <Icon.Megaphone />
+                <h4>간편결제</h4>
+              </div>
+            </div>
+            <div className="rounded-t-2xl bg-white mt-8 flex-1 font-semibold p-4 cursor-pointer border-transparent border-t border-r border-l hover:border-gray-300 transition">
+              <div className="flex gap-2">
+                <Icon.Pencil />
+                <h4>빠른 계좌이체</h4>
+              </div>
+            </div>
+            <div className="rounded-t-2xl bg-white mt-8 flex-1 font-semibold p-4 cursor-pointer border-transparent border-t border-r border-l hover:border-gray-300 transition">
+              <div className="flex gap-2">
+                <Icon.Chat />
+                <h4>해외결제</h4>
+              </div>
+            </div>
+          </div>
+        </Card> */}
+        <Card className="md:col-span-2 bg-zinc-800 text-white">
+          <div className="flex mt-4 mb-2">
+            <p className="text-primary font-semibold">Toss Payments</p>
+          </div>
+          <Card.Title>한국 금융의 기준, 토스 페이먼츠</Card.Title>
+          <Card.Subtitle>
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+            생기를 불어넣으세요. 창의력을 발휘하고 아이디어에 생기를
+            불어넣으세요.
+          </Card.Subtitle>
+          <div className="mt-8">
+            <Button className="h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 px-6">
+              서비스 둘러보기
+            </Button>
+          </div>
+        </Card>
+        <Card>
+          <div className="flex mb-4">
+            <IconHeader>
+              <Icon.Box />
+            </IconHeader>
+          </div>
+          <Card.Title>타이틀</Card.Title>
+          <Card.Subtitle>
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+            생기를 불어넣으세요.
+          </Card.Subtitle>
+        </Card>
+        <Card>
+          <div className="flex mb-4">
+            <IconHeader>
+              <Icon.Flag />
+            </IconHeader>
+          </div>
+          <Card.Title>결제 데이터 리포트</Card.Title>
+          <Card.Subtitle>
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+            생기를 불어넣으세요.
+          </Card.Subtitle>
+          <div className="flex flex-1 items-end">
+            <Button variant="outline">자세히 보기</Button>
+          </div>
+        </Card>
+        <Card>
+          <div className="flex mb-4">
+            <IconHeader>
+              <Icon.People />
+            </IconHeader>
+          </div>
+          <Card.Title>해외결제</Card.Title>
+          <Card.Subtitle>
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+            생기를 불어넣으세요.
+          </Card.Subtitle>
+          <div className="flex flex-1 items-end">
+            <Button variant="outline">자세히 보기</Button>
+          </div>
+        </Card>
+        <Card>
+          <div className="flex mb-4">
+            <IconHeader>
+              <Icon.Megaphone />
+            </IconHeader>
+          </div>
+          <Card.Title>정산지급대행 서비스</Card.Title>
+          <Card.Subtitle>
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+            생기를 불어넣으세요.
+          </Card.Subtitle>
+          <div className="flex flex-1 items-end">
+            <Button variant="outline">자세히 보기</Button>
+          </div>
+        </Card>
+        <Card>
+          <div className="flex mb-4">
+            <IconHeader>
+              <Icon.Box />
+            </IconHeader>
+          </div>
+          <Card.Title>현금영수증 무료발급</Card.Title>
+          <Card.Subtitle>
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+            생기를 불어넣으세요.
+          </Card.Subtitle>
+          <div className="flex flex-1 items-end text-gray-400">
+            1월 초 오픈예정
+          </div>
+        </Card>
+        <Card>
+          <div className="flex mb-4">
+            <IconHeader>
+              <Icon.Email />
+            </IconHeader>
+          </div>
+          <Card.Title>SNS 커뮤니티</Card.Title>
+          <Card.Subtitle>
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+            생기를 불어넣으세요.
+          </Card.Subtitle>
+          <div className="flex gap-2 flex-1 items-end">
+            <Image className="w-10 h-10" src={instagramIcon} alt="" />
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src={naverBlogIcon}
+              className="w-10 h-10 rounded-[10px]"
+              alt=""
             />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          </div>
+        </Card>
+        <Card half>
+          <div className="flex justify-between items-enter">
+            <div className="flex gap-2 items-center">
+              <BellIcon className="w-5 h-5 text-primary fill-primary" />
+              <Card.Title>토스 페이먼츠</Card.Title>
+            </div>
+            <ArrowRightIcon className="bg-gray-200 rounded-full p-1 w-6 h-6" />
+          </div>
+          <Card.Subtitle className="text-gray-400">
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+          </Card.Subtitle>
+        </Card>
+        <Card half>
+          <div className="flex gap-2 items-center">
+            <CreditCardIcon className="w-5 h-5 text-primary" />
+            <Card.Title>신용카드</Card.Title>
+          </div>
+          <Card.Subtitle>
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+          </Card.Subtitle>
+        </Card>
+        <Card half>
+          <div className="flex gap-2 items-center">
+            <PhoneIcon className="w-4 h-4 text-primary fill-primary" />
+            <Card.Title>휴대폰 결제</Card.Title>
+          </div>
+          <Card.Subtitle>
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+          </Card.Subtitle>
+        </Card>
+        <Card half>
+          <div className="flex gap-2 items-center">
+            <SparkleIcon className="w-5 h-5 text-primary fill-primary" />
+            <Card.Title>미리받기</Card.Title>
+          </div>
+          <Card.Subtitle>
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+          </Card.Subtitle>
+        </Card>
+        <Card half>
+          <div className="flex justify-between items-center">
+            <div className="flex gap-2 items-center">
+              <ZapIcon className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+              <Card.Title>오프라인 모임</Card.Title>
+            </div>
+            <ArrowRightIcon className="bg-gray-200 rounded-full p-1 w-6 h-6" />
+          </div>
+          <Card.Subtitle>
+            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
+          </Card.Subtitle>
+        </Card>
       </div>
     </main>
-  )
+  );
+};
+
+interface IconHeaderProps {
+  className?: string;
+  children: React.ReactNode;
 }
+
+const IconHeader = ({ children, className }: IconHeaderProps) => {
+  return (
+    <div className={cn("bg-white border rounded-full p-2", className)}>
+      {children}
+    </div>
+  );
+};
