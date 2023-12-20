@@ -4,14 +4,15 @@ import { Button } from "@/components/button";
 import { Card } from "@/components/card";
 import { Header } from "@/components/header";
 import { Icon } from "@/components/icon";
+import { LogoSliderCard } from "@/components/logo-slider-card";
 import { Title } from "@/components/title";
 import { cn } from "@/lib/utils";
 import {
   ArrowRightIcon,
   BellIcon,
-  CreditCardIcon,
   PhoneIcon,
   SparkleIcon,
+  TrophyIcon,
   ZapIcon,
 } from "lucide-react";
 import Image from "next/image";
@@ -91,18 +92,7 @@ const BentoSection = () => {
             </Button>
           </div>
         </Card>
-        <Card>
-          <div className="flex mb-4">
-            <IconHeader>
-              <Icon.Box />
-            </IconHeader>
-          </div>
-          <Card.Title>타이틀</Card.Title>
-          <Card.Subtitle>
-            AI 기반 디자인 유틸리티를 사용하여 창의력을 발휘하고 아이디어에
-            생기를 불어넣으세요.
-          </Card.Subtitle>
-        </Card>
+        <LogoSliderCard />
         <Card>
           <div className="flex mb-4">
             <IconHeader>
@@ -197,7 +187,7 @@ const BentoSection = () => {
         </Card>
         <Card half>
           <div className="flex gap-2 items-center">
-            <CreditCardIcon className="w-5 h-5 text-primary" />
+            <TrophyIcon className="w-4 h-4 text-primary fill-primary" />
             <Card.Title>신용카드</Card.Title>
           </div>
           <Card.Subtitle>
