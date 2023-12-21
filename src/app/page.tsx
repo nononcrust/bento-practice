@@ -16,6 +16,7 @@ import {
   ZapIcon,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -87,9 +88,11 @@ const BentoSection = () => {
             불어넣으세요.
           </Card.Subtitle>
           <div className="mt-8">
-            <Button className="h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 px-6">
-              서비스 둘러보기
-            </Button>
+            <Link href="/diagram">
+              <Button className="h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 px-6">
+                서비스 둘러보기
+              </Button>
+            </Link>
           </div>
         </Card>
         <LogoSliderCard />
