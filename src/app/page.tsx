@@ -5,7 +5,7 @@ import { Card } from "@/components/card";
 import { Header } from "@/components/header";
 import { Icon } from "@/components/icon";
 import { LogoSliderCard } from "@/components/logo-slider-card";
-import { Title } from "@/components/title";
+import { ReviewSection } from "@/components/review-section";
 import { cn } from "@/lib/utils";
 import {
   ArrowRightIcon,
@@ -24,6 +24,7 @@ export default function Home() {
       <Header />
       <div className="min-h-screen pb-32 bg-background">
         <BentoSection />
+        <ReviewSection />
       </div>
     </>
   );
@@ -32,51 +33,7 @@ export default function Home() {
 const BentoSection = () => {
   return (
     <main className="container pt-16">
-      <Title>토스페이먼츠 전체 서비스 모아보기</Title>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
-        {/* <Card className="md:col-span-3 pb-0">
-          <div className="flex gap-2">
-            <div className="flex flex-col">
-              <Card.Title>
-                토스페이먼츠에서 최적화된 결제 경험을 만들어 보세요
-              </Card.Title>
-              <Card.Subtitle className="whitespace-pre-wrap">
-                {
-                  "토스페이먼츠 기본 결제모드로 결제수단 관리와 프로모션,\n혜택 노출 여부 등 모든 관리를 개발자 없이 어드민에서 쉽게 할 수 있어요."
-                }
-              </Card.Subtitle>
-            </div>
-            <div className="flex flex-1 justify-end">
-              <ArrowRightIcon className="bg-gray-200 rounded-full p-[6px] w-8 h-8" />
-            </div>
-          </div>
-          <div className="flex justify-center gap-6 flex-1">
-            <div className="rounded-t-2xl bg-white mt-8 flex-1 font-semibold p-4 cursor-pointer border-transparent border-t border-r border-l hover:border-gray-300 transition">
-              <div className="flex gap-2">
-                <Icon.Flag />
-                <h4>결제 관리</h4>
-              </div>
-            </div>
-            <div className="rounded-t-2xl bg-white mt-8 flex-1 font-semibold p-4 cursor-pointer border-transparent border-t border-r border-l hover:border-gray-300 transition">
-              <div className="flex gap-2">
-                <Icon.Megaphone />
-                <h4>간편결제</h4>
-              </div>
-            </div>
-            <div className="rounded-t-2xl bg-white mt-8 flex-1 font-semibold p-4 cursor-pointer border-transparent border-t border-r border-l hover:border-gray-300 transition">
-              <div className="flex gap-2">
-                <Icon.Pencil />
-                <h4>빠른 계좌이체</h4>
-              </div>
-            </div>
-            <div className="rounded-t-2xl bg-white mt-8 flex-1 font-semibold p-4 cursor-pointer border-transparent border-t border-r border-l hover:border-gray-300 transition">
-              <div className="flex gap-2">
-                <Icon.Chat />
-                <h4>해외결제</h4>
-              </div>
-            </div>
-          </div>
-        </Card> */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="md:col-span-2 bg-zinc-800 text-white">
           <div className="flex mt-4 mb-2">
             <p className="text-primary font-semibold">Toss Payments</p>

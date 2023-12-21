@@ -1,5 +1,7 @@
 import Genius from "@/assets/images/genius.svg";
 import { AutoSuggestCard } from "@/components/diagram/auto-suggest-card";
+import { AutomatorCommunityCard } from "@/components/diagram/automator-community-card";
+import { SyncAutomationCard } from "@/components/diagram/sync-automation-card";
 import { TransformIdeaCard } from "@/components/diagram/transform-idea-card";
 import { SunDim } from "lucide-react";
 
@@ -27,7 +29,9 @@ export default function DiagramPage() {
         </div>
         <div className="mt-12 grid grid-cols-2 gap-6">
           <TransformIdeaCard />
+          <AutomatorCommunityCard />
           <AutoSuggestCard />
+          <SyncAutomationCard />
         </div>
       </section>
     </main>
