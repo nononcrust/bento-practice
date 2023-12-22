@@ -8,7 +8,7 @@ export const Card = ({ className, half, ...props }: CardProps) => {
   return (
     <div
       className={cn(
-        "rounded-3xl border bg-content row-span-2 p-8 min-h-[400px] max-h-[400px] flex flex-col transition",
+        "rounded-3xl bg-content p-8 min-h-[400px] max-h-[400px] flex flex-col transition",
         half && "row-span-1 min-h-[184px] max-h-[184px]",
         className,
       )}

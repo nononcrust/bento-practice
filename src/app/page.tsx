@@ -7,13 +7,14 @@ export default function Home() {
   return (
     <>
       <BentoSection />
+      <FooterSection />
     </>
   );
 }
 
 const BentoSection = () => {
   return (
-    <section className="container pt-16 grid grid-cols-3 gap-4 pb-32">
+    <section className="container pt-16 grid grid-cols-1 md:grid-cols-3 gap-4 pb-32">
       <HelpCenterCard />
       <ServiceCard />
       <ChatCard />
@@ -43,3 +44,18 @@ const BentoSection = () => {
 //     </div>
 //   );
 // };
+
+const FooterSection = () => {
+  return (
+    <section className="py-32 bg-zinc-800">
+      <div className="container">
+        <h2 className="text-4xl font-bold text-white">
+          더 자세히 알고 싶다면?
+        </h2>
+        <button className="h-16 flex items-center rounded-full px-8 font-semibold text-lg text-white mt-8 bg-gradient-to-b from-primary to-primary-dark from-40%">
+          자세히 알아보기
+        </button>
+      </div>
+    </section>
+  );
+};
