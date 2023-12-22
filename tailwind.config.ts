@@ -26,6 +26,25 @@ const config: Config = {
         "primary-dark": "#5E4EE6",
         "content-light": colors.gray[50],
       },
+      boxShadow: {
+        "dark-glass":
+          "inset 0 1px 2px #525154, 0 20px 25px -5px rgba(0,0,0,.8), 0 10px 10px -5px rgba(0,0,0,.9)",
+        "light-glass": "5px 5px 8px #eaebec, -5px -5px 8px #ffffff",
+      },
+      keyframes: {
+        "fade-in-up": {
+          from: { transform: "translateY(80px)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        "fade-in-up": "fade-in-up 0.7s ease-out",
+        "fade-in": "fade-in 0.5s ease-out",
+      },
     },
   },
   plugins: [

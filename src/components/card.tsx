@@ -8,8 +8,8 @@ export const Card = ({ className, half, ...props }: CardProps) => {
   return (
     <div
       className={cn(
-        "rounded-3xl bg-content row-span-2 p-8 min-h-[300px] max-h-[300px] flex flex-col transition border",
-        half && "row-span-1 min-h-[142px] max-h-[142px]",
+        "rounded-3xl border bg-content row-span-2 p-8 min-h-[400px] max-h-[400px] flex flex-col transition",
+        half && "row-span-1 min-h-[184px] max-h-[184px]",
         className,
       )}
       {...props}
@@ -21,7 +21,7 @@ interface CardTitleProps extends React.ComponentPropsWithoutRef<"h3"> {}
 
 const CardTitle = ({ className, children, ...props }: CardTitleProps) => {
   return (
-    <h3 className={cn("font-semibold text-xl", className)} {...props}>
+    <h3 className={cn("font-bold text-xl", className)} {...props}>
       {children}
     </h3>
   );

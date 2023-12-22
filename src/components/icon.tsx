@@ -4,6 +4,7 @@ import Conference from "@/assets/icons/006.화상회의.svg";
 import Email from "@/assets/icons/008.이메일.svg";
 import Megaphone from "@/assets/icons/016.공지.svg";
 import Flag from "@/assets/icons/034.깃발,목표.svg";
+import HelpCenter from "@/assets/icons/035.상담,고객지원.svg";
 import Box from "@/assets/icons/045.상자.svg";
 import Pencil from "@/assets/icons/082.연필.svg";
 import People from "@/assets/icons/102.동료.svg";
@@ -18,4 +19,5 @@ export const Icon = {
   Pencil,
   People,
   Box,
+  HelpCenter,
 };
